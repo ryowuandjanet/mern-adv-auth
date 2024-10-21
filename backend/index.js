@@ -18,10 +18,6 @@ app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-app.get('/', (req, res) => {
-  res.send('Hello world');
-});
-
 app.use('/api/auth', authRoutes);
 
 if (process.env.NODE_ENV === 'production') {
